@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Pokemon from './Pokemon';
+// import Pokemon from './Pokemon';
 
 class App extends React.Component {
   render() {
@@ -20,13 +20,21 @@ class App extends React.Component {
       <ul className="list">
       {pokemon.map(item => {
         return (
+        <div>
           <li>
-            <Pokemon 
-            name={item.name}
-            image={item.url}      
-            types={item.types}
-              />
+            <h2>{item.name}</h2>
+            <img src={item.url} />
+             <ul> 
+               {item.types.map(type => {
+                 return (
+                   <h3>
+                     {type}
+                   </h3>
+                 )
+               })}
+             </ul>
           </li>
+        </div>
         );
       })}      
       </ul>
