@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import Pokemon from './Pokemon';
+import PokeList from './PokeList';
 
 class App extends React.Component {
   render() {
@@ -17,27 +17,10 @@ class App extends React.Component {
       {"id":10,"name":"caterpie","types":["bug"],"evolution":null,"url":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png"}
     ];
     return (
-      <ul className="list">
-      {pokemon.map(item => {
-        return (
-        <div>
-          <li>
-            <h2>{item.name}</h2>
-            <img src={item.url} />
-             <ul> 
-               {item.types.map(type => {
-                 return (
-                   <h3>
-                     {type}
-                   </h3>
-                 )
-               })}
-             </ul>
-          </li>
-        </div>
-        );
-      })}      
-      </ul>
+     <PokeList
+     pokemon={pokemon}
+      />
+
     );
   }};
 
