@@ -15,6 +15,7 @@ class PokeList extends React.Component {
             imgURL={item.url}
             alt={item.name}
             types={item.types}
+            fav={this.props.fav}
           />
         );
       })}      

@@ -13,10 +13,22 @@ class App extends React.Component {
       pokemon: pokemon,
     }
   }
+  fav(e) {
+    const trigger = e.currentTarget;
+    console.log(trigger);
+    // this.setState((prevState) => {
+    //   const Favs = { ...prevState.pokemon };
+    //   return (
+    //     newFavs = pokemon: Favs
+    //   );
+      
+    // })
+  }
   render() {
      return (
      <PokeList
      pokemon={this.state.pokemon}
+     fav={this.fav}
       />
 
     );
