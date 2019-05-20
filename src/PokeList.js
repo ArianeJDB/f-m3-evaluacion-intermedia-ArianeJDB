@@ -4,6 +4,7 @@ import Pokemon from './Pokemon';
 
 class PokeList extends React.Component {
   render() {
+    // const { pokemon } = this.props;
     return (
       <ul className="list" key="1">
       {this.props.pokemon.map(item => {
@@ -23,7 +24,7 @@ class PokeList extends React.Component {
 }
 
 PokeList.propTypes = {
-  pokemon: PropTypes.array,
+  pokemon: PropTypes.arrayOf(PropTypes.object),
   // Pokemon: PropTypes.string,
 
 }
