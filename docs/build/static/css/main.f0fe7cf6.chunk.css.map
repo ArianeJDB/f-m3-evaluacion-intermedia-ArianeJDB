@@ -1,1 +1,0 @@
-{"version":3,"sources":["App.css"],"names":[],"mappings":"AAGA,kBACE,eAEF,CACA,MACE,qBAAuB,CACvB,WAAY,CACZ,iBACF,CAGA,OACE,SACF","file":"main.f0fe7cf6.chunk.css","sourcesContent":[".list {\n  list-style: none;\n}\n.list-types {\n  list-style: none;\n\n}\n.card {\n  border: black solid 2px;\n  margin: 10px;\n  text-align: center;\n}\n\n\n.types {\n  padding: 0;\n}"]}
