@@ -19,7 +19,6 @@ class Pokemon extends React.Component{
                  )
                })}
              </ul>
-             {/* <button onClick={this.props.fav}>Fav</button> */}
           </li>
         </div>
     );
