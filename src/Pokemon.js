@@ -5,7 +5,6 @@ class Pokemon extends React.Component{
   render() {
     return (
       <div className="card">
-          <li className="list-card" onClick={this.props.fav}>
             <h2 className="title-card">{this.props.name}</h2>
             <img src={this.props.imgURL} alt={this.props.name} />
              <ul className="types"> 
@@ -19,7 +18,6 @@ class Pokemon extends React.Component{
                  )
                })}
              </ul>
-          </li>
         </div>
     );
   }

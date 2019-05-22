@@ -22,10 +22,13 @@ class App extends React.Component {
   }
   render() {
      return (
-     <PokeList
-     pokemon={this.state.pokemon}
-     fav={this.handleFav}
-      />
+       <React.Fragment>
+         <h1>Mi lista de pokemons</h1>
+       <PokeList
+       pokemon={this.state.pokemon}
+       fav={this.handleFav}
+        />
+       </React.Fragment>
 
     );
   }};

@@ -8,14 +8,16 @@ class PokeList extends React.Component {
       <ul className="list" key="1">
       {this.props.pokemon.map(item => {
         return (
-          <Pokemon 
-            key={item.id}
-            name={item.name}
-            imgURL={item.url}
-            alt={item.name}
-            types={item.types}
-            fav={this.props.fav}
-          />
+          <li className="list-card" onClick={this.props.fav}>
+            <Pokemon 
+              key={item.id}
+              name={item.name}
+              imgURL={item.url}
+              alt={item.name}
+              types={item.types}
+              fav={this.props.fav}
+            />
+          </li>
         );
       })}      
       </ul>
