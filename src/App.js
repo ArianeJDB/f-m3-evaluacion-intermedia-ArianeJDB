@@ -9,29 +9,37 @@ class App extends React.Component {
 
     this.state = {
       pokemon: pokemon,
-      fav: ''
+      fav: []
     }
 
     this.handleFav = this.handleFav.bind(this);
   }
-  handleFav(e) {
-    const trigger = e.currentTarget;
-    this.setState(prevState => ({
-      fav: prevState.fav ? trigger.className = '' : trigger.className = 'favourite'
-    }))
+  handleFav(e, obj) {
+    const id = parseInt(e.currentTarget.id);
+    const newFav = [...this.state.fav];
+    let index = newFav.indexOf(obj);
+    if(this.state.fav.includes(id) === true) {
+      newFav.splice(index, 1);
+    } else {
+      newFav.push(id);
+    }
+    this.setState({
+      fav: newFav
+    })
   }
-  render() {
+    render() {
      return (
        <React.Fragment>
          <h1>Mi lista de pokemons</h1>
        <PokeList
        pokemon={this.state.pokemon}
-       fav={this.handleFav}
+       fav={this.state.fav}
+       handleFav={this.handleFav}
         />
        </React.Fragment>
 
     );
-  }};
+  }}
 
 
 export default App;
